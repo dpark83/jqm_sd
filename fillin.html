@@ -1,0 +1,67 @@
+<!DOCTYPE html> 
+<html>
+<head>
+	<title>Page Title</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css" />
+	<link rel="stylesheet" href="https://rawgithub.com/arschmitz/jquery-mobile-datepicker-wrapper/v0.1.1/jquery.mobile.datepicker.css" />
+	<script src="http://code.jquery.com/jquery-1.10.0.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
+	<script src="https://rawgithub.com/jquery/jquery-ui/1.10.4/ui/jquery.ui.datepicker.js"></script>
+	<script id="mobile-datepicker" src="https://rawgithub.com/arschmitz/jquery-mobile-datepicker-wrapper/v0.1.1/jquery.mobile.datepicker.js"></script>
+</head>
+
+<body>
+	<div data-role="page" id="mainPage">
+		<div data-role="header">
+			<h1>Sleep Diary</h1>
+		</div>
+		<div data-role="main" class="ui-content">
+			<form>
+				<label>
+					<input name="chkHoliday " type="checkbox">Yesterday was a Holiday
+				</label>
+
+				<label for="txtSleepTime">Went to sleep at:</label>
+				<input data-clear-btn="true" name="txtSleepTime" id="txtSleepTime" value="" type="time">
+
+				<label for="txtWakeTime">Woke up at:</label>
+				<input data-clear-btn="true" name="txtWakeTime" id="txtWakeTime" value="" type="time">
+
+				<label for="txtTimeToSleep">Fell asleep in (minutes):</label>
+				<input data-clear-btn="true" name="txtTimeToSleep" id="txtTimeToSleep" value="" type="number">
+
+				<fieldset data-role="controlgroup">
+					<legend>When I woke I felt:</legend>
+					<input name="rbWoke" id="rbWokea" value="1" type="radio">
+					<label for="rbWokea">Refreshed</label>
+					<input name="rbWoke" id="rbWokeb" value="2" type="radio">
+					<label for="rbWokeb">Tired</label>
+					<input name="rbWoke" id="rbWokec" value="3" type="radio">
+					<label for="rbWokec">Other</label>
+				</fieldset>	
+
+				<label for="txtDisturb">My sleep was disturbed by:</label>
+				<textarea name="txtDisturb" id="txtDisturb"></textarea>
+				
+				<fieldset data-role="controlgroup">
+					<legend>In the 3 hours before bed, I had (only answer if yes):</legend>
+					<label>
+						<input name="chkDrink" type="checkbox">caffeine cola/tea/choc energy drink
+					</label>
+				</fieldset>	
+
+				<fieldset data-role="controlgroup">
+					<legend>I had a nap during the day:</legend>
+					<input name="rbNap" id="rbNapa" value="1" type="radio">
+					<label for="rbNapa">Yes</label>
+					<input name="rbNap" id="rbNapb" value="2" type="radio">
+					<label for="rbNapb">No</label>
+				</fieldset>	
+
+				<button type="submit" id="submit" class="ui-shadow ui-btn ui-corner-all ui-mini">Submit</button>
+			</form>
+		</div>
+	</div>
+</body>
+</html>
